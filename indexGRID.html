@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gucci Brasil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didot&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9a4d1c4.js" crossorigin="anonymous"></script> <!-- Ícones FontAwesome -->
+  <style>
+   
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+header .left a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+}
+
+header .left a i {
+  margin-right: 5px;
+}
+
+
+header .center .logo {
+  font-family: 'Didot', serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: black;
+}
+
+header .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .right a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+header .right a.icon i {
+  font-size: 16px;
+}
+
+
+.hero {
+  margin-top: 90px;
+  height: 100vh;
+  background: url('https://media.gucci.com/content/HeroRegularStandard_1600x675/1753087523/HeroRegularStandard_Gucci-FW25-JULY25-250603-05-015-w1-C_001_Default.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero .overlay {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero h2 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  font-weight: 300;
+}
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #f7f4ef; /* Bege elegante Gucci */
+  color: #111;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  padding: 5px;
+}
+
+/* ======== ÁREAS DO GRID ======== */
+.container > div {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 2px solid #c6a664; /* dourado suave */
+}
+
+.header h2 {
+  font-size: 2.2rem;
+  color: #123524; /* verde escuro Gucci */
+  letter-spacing: 2px;
+}
+
+.menu {
+  grid-area: menu;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.menu a {
+  color: #9b1b30; /* vermelho vinho Gucci */
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: #c6a664;
+}
+
+.content {
+  grid-area: content;
+}
+
+/* ======== GALERIA DE FOTOS ======== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.6s ease, filter 0.5s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+  cursor: pointer;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #fafafa;
+  color: #555;
+  font-family: 'Raleway', sans-serif;
+  border-top: 2px solid #c6a664;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="left">
+      <a href="#" class="contact"><i class="fas fa-plus"></i> Contact Us</a>
+    </div>
+
+    <div class="center">
+      <h1 class="logo">GUCCI</h1>
+    </div>
+
+    <div class="right">
+      <a href="#" class="icon"><i class="fas fa-search"></i></a>
+      <a href="#" class="menu">MENU</a>
+      <a href="#" class="icon"><i class="fas fa-bars"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>GUCCI BRASIL: SELEÇÃO ESPECIAL</h2>
+      <p>Descubra a seleção das coleções masculinas e femininas disponíveis na Gucci Brasil.</p>
+    </div>
+  </section>
+
+<h1 style="text-align:center; font-family:'Playfair Display', serif; color:#123524;">Editorial Gucci Style</h1>
+
+<div class="container">
+  <div class="header"><h2>Coleção Primavera 2025</h2></div>
+
+  <div class="menu">
+    <a href="#">Campanha</a><br>
+    <a href="#">Coleção</a><br>
+    <a href="#">Making Of</a><br>
+  </div>
+
+  <div class="content">
+    <h3 style="font-family:'Playfair Display', serif;">Galeria de Fotos</h3>
+    <div class="gallery">
+      <img src="modelo1.webp"
+       alt="Modelo 1" >
+      <img src="modelo2.avif" alt="Modelo 2">
+      <img src="modelo3.webp" alt="Modelo 3">
+      <img src="modelo4.jfif" alt="Modelo 4">
+      <img src="modelo5.jpg" alt="Modelo 5">
+      <img src="modelo6.webp" alt="Modelo 6">
+      <img src="modelo7.webp" alt="Modelo7">
+      <img src="modelo8.webp" alt="Modelo8">
+    </div>
+  </div>
+
+  <div class="footer"><h4>© 2025 Coleção Inspirada em Gucci</h4><br>
+    <h5>ASS: Helena Láyla</h5>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
